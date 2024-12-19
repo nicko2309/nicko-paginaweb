@@ -1,0 +1,236 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #001f3f; /* Azul marino */
+  color: white; /* Color de texto blanco para mayor contraste */
+}
+
+header {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: url("imagenes/IMG_20180509_144940327.jpg") no-repeat center
+    center/cover;
+  color: white;
+  text-align: center;
+  padding: 50px 20px; /* Ajusta el padding según lo necesites */
+  height: auto; /* Altura automática para permitir crecimiento */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0); /* Fondo blanco semi-transparente */
+  position: absolute; /* Para que se superponga al header */
+  bottom: 0; /* Posiciona el menú en la parte inferior del header */
+  width: 100%; /* Asegura que el menú tenga el ancho completo */
+  z-index: 2; /* Asegura que esté por encima de cualquier fondo */
+}
+
+.nav-link {
+  color: #2e1a91; /* Color del texto del enlace */
+}
+
+.nav-link:hover {
+  color: #dcd9e3; /* Color del texto del enlace al pasar el mouse */
+}
+
+.header-logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 80px; /* Altura de la imagen, ajusta según necesites */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 72, 72, 0.5); /* Fondo oscuro semi-transparente */
+  z-index: 1;
+}
+
+header h1,
+header h2 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header h2 {
+  font-size: 1.2rem;
+}
+
+nav {
+  position: absolute; /* Posiciona el menú dentro del header */
+  right: 5px;
+  z-index: 2;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline; /* Cambiado a inline por defecto */
+  margin: 0 3px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  background-color: #2e1a91;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #4113d6;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#acerca {    color: black; /* Cambia el color del texto a negro */    font-family: "Arial", sans-serif; /* Cambia la fuente a Arial, puedes cambiarla por cualquier otra */    font-size: 1.1rem; /* Ajusta el tamaño de la fuente */}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #053d75;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #e9ecef;
+  z-index: 1000;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+.carousel {
+  max-width: 800px; /* Ajusta el ancho máximo del carrusel */
+  margin: auto; /* Centra el carrusel horizontalmente */
+}
+.carousel img {
+  max-height: 500px; /* Ajusta la altura máxima de las imágenes */
+  width: auto; /* Mantiene la proporción de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 30px 10px; /* Reducir padding */
+  }
+
+  .header-logo {
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  nav ul li {
+    display: inline-block; /* Cambia a inline-block */
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 0; /* Ajustar el espacio para el header */
+  }
+
+  header {
+    padding: 20px 10px; /* Reducir padding */
+  }
+
+  .header-logo {
+    height: 40px;
+    left: 10px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header h2 {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    text-align: center; /* Centrar el menú en pantallas pequeñas */
+  }
+
+  nav ul li {
+    display: block; /* Cambia a bloque para apilar los elementos del menú */
+    margin: 5px 0; /* Espacio entre los elementos del menú */
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 15px 5px; /* Reducir padding adicional */
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header h2 {
+    font-size: 0.8rem;
+  }
+
+  .header-logo {
+    height: 30px;
+  }
+
+  section {
+    margin: 10px; /* Reducir márgenes en secciones */
+    padding: 15px; /* Reducir padding en secciones */
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+  footer {
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño para el footer */
+  }
+}
+.description {
+  color: #007bff; /* Cambia este valor al color que desees */
+  text-align: center; /* Centra el texto */
+  margin-top: 8px; /* Espaciado superior, ajusta según sea necesario */
+}

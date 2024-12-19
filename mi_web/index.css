@@ -1,0 +1,35 @@
+header{
+    background-color: rgb(90, 185, 226);
+    width: 100%;
+}
+img{
+    width: 150px;
+}
+h1{
+    font-size: 34px;
+    color: blueviolet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+p{
+    font-size: 20px;
+    color: blue;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: aquamarine;
+}
+.caja{
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.caja img{
+    
+}
